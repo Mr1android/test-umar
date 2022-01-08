@@ -1,0 +1,41 @@
+
+1  promis - это обьекты для асинхронных вычислений
+
+   const promise = fetch("ссылка");
+
+2  async- всегда возвращает промис,позволяет использовать await внутри функции
+   await - не может работать без async
+
+    async function example() {
+    let promise = new Promise((resolve, reject) => {
+        setTimeout(() => resolve("готово!"), 2000)
+    });
+    let result = await promise;
+    alert(result);
+}
+example();
+
+
+
+
+3  контекст - определяет доступ к переменным при вызове,является уникальной для каждого вызова
+   Значение this — это ссылка на объект который вызывает код в данный момент
+
+
+
+4  замыкание- даёт нам доступ к переменным внешней функции из внутренней
+
+    function func() {
+  return function() {
+    console.log('rgba')
+  };
+}
+func()
+
+
+5  стрелочные функции-делает код короче,лучше считается,упрощяет код,нет собственного контекста т.к. она ее наследует
+
+let func = function(number1, number2)
+ {return number1 * number2}
+
+let func2 = (number1, number2) => number1 * number2;
